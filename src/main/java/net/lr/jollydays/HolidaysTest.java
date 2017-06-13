@@ -14,7 +14,6 @@ public class HolidaysTest {
 
     @Activate
     public void start()  {
-        Thread.currentThread().setContextClassLoader(HolidayManager.class.getClassLoader());
         HolidayManager manager = HolidayManager.getInstance(HolidayCalendar.GERMANY);
         Set<Holiday> holidays = manager.getHolidays(2017);
         for (Holiday holiday : holidays) {
